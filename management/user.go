@@ -25,7 +25,7 @@ type User struct {
 
 	// UserMetadata holds data that the user has read/write access to (e.g.
 	// color_preference, blog_url, etc).
-	UserMetadata map[string]interface{} `json:"user_metadata,omitempty"`
+	UserMetadata *map[string]interface{} `json:"user_metadata,omitempty"`
 
 	// True if the user's email is verified, false otherwise. If it is true then
 	// the user will not receive a verification email, unless verify_email: true
@@ -46,7 +46,7 @@ type User struct {
 
 	// AppMetadata holds data that the user has read-only access to (e.g. roles,
 	// permissions, vip, etc).
-	AppMetadata map[string]interface{} `json:"app_metadata,omitempty"`
+	AppMetadata *map[string]interface{} `json:"app_metadata,omitempty"`
 }
 
 func (u *User) String() string {

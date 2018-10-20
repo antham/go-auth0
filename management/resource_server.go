@@ -37,7 +37,7 @@ type ResourceServer struct {
 	// verifying the JWT sent to Auth0 for token introspection.
 	VerificationLocation *string `json:"verificationLocation,omitempty"`
 
-	Options map[string]interface{} `json:"options,omitempty"`
+	Options *map[string]interface{} `json:"options,omitempty"`
 }
 
 func (r *ResourceServer) String() string {
